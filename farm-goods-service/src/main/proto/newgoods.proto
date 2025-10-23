@@ -1,0 +1,43 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "goods";
+service FarmerGoodsService{
+  rpc CreateNewGoods (GoodsRequest) returns (GoodsResponse);
+  rpc PushGoodsBatch (FGoodsList) returns (GoodsList);
+  rpc CustomerRequest (CustomerDetails) returns (ListOfGoods);
+  rpc EditeGoods (GoodsRequest) returns (ListOfGoods);
+}
+message GoodsRequest{
+  string productName = 1;
+  string productType =2;
+  int32 quantityAvailable = 3;
+  double unitPrice =4;
+  string harvestDate = 5;
+  string expiryDate = 6;
+  string id = 7;
+}
+message GoodsResponse{
+  string productName = 1;
+  string productType =2;
+  int32 quantityAvailable = 3;
+  double unitPrice =4;
+  string harvestDate = 5;
+  string expiryDate = 6;
+  string id = 7;
+}
+
+message GoodsList{
+  int32 accountNumber = 1;
+  string accountName = 2;
+}
+
+message FGoodsList{
+  repeated GoodsRequest goods = 1;
+}
+message CustomerDetails{
+  string customerId = 1;
+  string customerName = 2;
+}
+message ListOfGoods{
+  repeated GoodsResponse goodsForCustomerRequest = 1;
+}

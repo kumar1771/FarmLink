@@ -1,0 +1,27 @@
+app:
+  api-key: ${apikey}
+
+spring:
+  application:
+  name: Api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: Auth-Service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/Users/**
+          filters:
+            - ApiKeyValidation
+
+        - id: Auth-Service
+          uri: http://localhost:4002
+          predicates:
+            - Path=/customers/**
+          filters:
+            - name: JwtValidation
+              args:
+                allowedRoles: FARMER, ADMIN
+server:
+  port: 9090

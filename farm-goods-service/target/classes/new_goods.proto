@@ -1,0 +1,22 @@
+syntax="proto3";
+option java_multiple_files = true;
+option java_package = "newgoods";
+service GoodsService{
+  rpc createNewGoods (RequestNewGoods) returns (ResponseNewGoods);
+}
+message RequestNewGoods{
+  string productName = 1;
+  string productType = 2;
+  int32 quantityAvailable = 3;
+  double unitPrice = 4;
+  string harvestDate = 5;
+  string expiryDate = 6;
+}
+message ResponseNewGoods{
+  string productName = 1;
+  string productType = 2;
+  int32 quantityAvailable = 3;
+  double unitPrice = 4;
+  string harvestDate = 5;
+  string expiryDate = 6;
+}
