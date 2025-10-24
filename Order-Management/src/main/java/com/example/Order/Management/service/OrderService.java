@@ -2,6 +2,7 @@ package com.example.Order.Management.service;
 
 import com.example.Order.Management.Method.Order;
 import com.example.Order.Management.Repository.OrderRepository;
+import com.example.Order.Management.dto.OrderRequestDto;
 import com.example.Order.Management.kafka.kafkaProducer1;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.springframework.mail.SimpleMailMessage;
@@ -52,5 +53,9 @@ public class OrderService {
         message.setSubject(subject);
         message.setText(body);
         javaMailSender.send(message);
+    }
+
+    public Boolean orderGoods(OrderRequestDto orderRequestDto) {
+
     }
 }

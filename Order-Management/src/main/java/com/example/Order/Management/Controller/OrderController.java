@@ -1,6 +1,7 @@
 package com.example.Order.Management.Controller;
 
 import com.example.Order.Management.Method.Order;
+import com.example.Order.Management.dto.OrderRequestDto;
 import com.example.Order.Management.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -43,5 +44,9 @@ public class OrderController {
     public ResponseEntity<Void> deleteOrder(@PathVariable UUID id) {
         orderService.deleteOrder(id);
         return ResponseEntity.noContent().build();
+    }
+    @PutMapping
+    public String orderGoods(@RequestBody OrderRequestDto orderRequestDto){
+        Boolean k = orderService.orderGoods(orderRequestDto);
     }
 }
