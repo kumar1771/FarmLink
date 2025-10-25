@@ -5,6 +5,7 @@ import com.example.Order.Management.dto.OrderRequestDto;
 import com.example.Order.Management.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import orders.ExistOrNot;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,6 +48,7 @@ public class OrderController {
     }
     @PutMapping
     public String orderGoods(@RequestBody OrderRequestDto orderRequestDto){
-        Boolean k = orderService.orderGoods(orderRequestDto);
+        ExistOrNot k = orderService.orderGoods(orderRequestDto);
+        return k.toString();
     }
 }

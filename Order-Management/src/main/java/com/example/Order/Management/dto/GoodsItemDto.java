@@ -1,5 +1,7 @@
 package com.example.Order.Management.dto;
 
+import jakarta.persistence.*;
+
 import java.util.UUID;
 
 public class GoodsItemDto {
