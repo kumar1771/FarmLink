@@ -10,6 +10,7 @@ message CustomerId{
 }
 message ExistOrNot{
   string message = 1;
+  string email = 2;
 }
 message Goods{
   string good_id = 1;

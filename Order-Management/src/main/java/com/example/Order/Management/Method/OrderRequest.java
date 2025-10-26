@@ -15,6 +15,16 @@ public class OrderRequest {
     private UUID orderId;
 
     private UUID customerId;
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     private String status;
     private LocalDateTime orderDate;
 

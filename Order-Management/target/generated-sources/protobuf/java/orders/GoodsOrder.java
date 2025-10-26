@@ -50,15 +50,15 @@ public final class GoodsOrder {
   static {
     java.lang.String[] descriptorData = {
       "\n\020goodsOrder.proto\"\030\n\nCustomerId\022\n\n\002id\030\001" +
-      " \001(\t\"\035\n\nExistOrNot\022\017\n\007message\030\001 \001(\t\"9\n\005G" +
-      "oods\022\017\n\007good_id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\022" +
-      "\r\n\005price\030\003 \001(\001\"1\n\022OrdersFromCustomer\022\033\n\013" +
-      "ListOfGoods\030\001 \003(\0132\006.Goods\"\035\n\nGoodsExist\022" +
-      "\017\n\007message\030\001 \001(\t2\212\001\n\norderGoods\0226\n\032TakeN" +
-      "ewOrderFromCustomerId\022\013.CustomerId\032\013.Exi" +
-      "stOrNot\022D\n TakeNNumbersOfOrdersFromCusto" +
-      "mer\022\023.OrdersFromCustomer\032\013.GoodsExistB\n\n" +
-      "\006ordersP\001b\006proto3"
+      " \001(\t\",\n\nExistOrNot\022\017\n\007message\030\001 \001(\t\022\r\n\005e" +
+      "mail\030\002 \001(\t\"9\n\005Goods\022\017\n\007good_id\030\001 \001(\t\022\020\n\010" +
+      "quantity\030\002 \001(\005\022\r\n\005price\030\003 \001(\001\"1\n\022OrdersF" +
+      "romCustomer\022\033\n\013ListOfGoods\030\001 \003(\0132\006.Goods" +
+      "\"\035\n\nGoodsExist\022\017\n\007message\030\001 \001(\t2\212\001\n\norde" +
+      "rGoods\0226\n\032TakeNewOrderFromCustomerId\022\013.C" +
+      "ustomerId\032\013.ExistOrNot\022D\n TakeNNumbersOf" +
+      "OrdersFromCustomer\022\023.OrdersFromCustomer\032" +
+      "\013.GoodsExistB\n\n\006ordersP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -75,7 +75,7 @@ public final class GoodsOrder {
     internal_static_ExistOrNot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ExistOrNot_descriptor,
-        new java.lang.String[] { "Message", });
+        new java.lang.String[] { "Message", "Email", });
     internal_static_Goods_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Goods_fieldAccessorTable = new

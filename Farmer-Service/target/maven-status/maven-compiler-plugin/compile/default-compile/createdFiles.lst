@@ -16,6 +16,7 @@ newgoods\GoodsServiceGrpc$GoodsServiceFileDescriptorSupplier.class
 goods\CustomerDetails.class
 goods\GoodsResponseOrBuilder.class
 orders\ExistOrNot$1.class
+com\example\Farmer_Service\grpc\OrderCheckCustomerGrpcService.class
 orders\ExistOrNot$Builder.class
 goods\GoodsList$1.class
 orders\orderGoodsGrpc$3.class
